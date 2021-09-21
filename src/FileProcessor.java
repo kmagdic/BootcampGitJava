@@ -24,8 +24,9 @@ public class FileProcessor {
             float temp = s.nextFloat();
             float pressure = s.nextFloat();
             System.out.println(city + " - " + temp + " - " + pressure);
-
         }
+
+
     }
 
 

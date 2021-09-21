@@ -26,10 +26,11 @@ public class TempCroatiaFetcher {
             String city = tr.child(0).text();
             String temp = tr.child(2).text();
             String pressure = tr.child(4).text();
-            pressure = pressure.replaceAll("\\*", "");
 
-            temp = temp.replaceAll("-", "0");
+            // remove '*' and '-'
+            pressure = pressure.replaceAll("\\*", "");
             pressure = pressure.replaceAll("-", "0");
+            temp = temp.replaceAll("-", "0");
 
             w.write(city + ", " + temp + ", " + pressure + "\n");
         }
