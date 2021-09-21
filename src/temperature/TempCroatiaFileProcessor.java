@@ -35,8 +35,8 @@ public class TempCroatiaFileProcessor {
 
         while(s.hasNext()) {
             String city = s.next();
-            float temp = s.nextFloat();
-            float pressure = s.nextFloat();
+            float temp = Float.parseFloat(s.next());
+            float pressure = Float.parseFloat(s.next());
             System.out.println(city + " - " + temp + " - " + pressure);
         }
 
