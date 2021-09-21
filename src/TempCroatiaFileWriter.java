@@ -9,7 +9,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class TempCroatiaFetcher {
+public class TempCroatiaFileWriter {
 
     public static void main(String[] args) throws IOException {
 

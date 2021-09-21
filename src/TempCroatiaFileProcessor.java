@@ -9,11 +9,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class FileProcessor {
+public class TempCroatiaFileProcessor {
     public static void main(String[] args) throws IOException {
         Scanner s = new Scanner(new File("temp_croatia_2021-09-21.txt"));
 
-        // set delimiter to ", " or "\n"
+        // set delimiter to ", " or "\n" (instead of default " ")
         s.useDelimiter(", |\n");
 
         // skip first line (header)
