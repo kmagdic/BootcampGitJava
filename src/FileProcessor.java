@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class FileProcessor {
     public static void main(String[] args) throws IOException {
-        Scanner s = new Scanner(new File("temp_croatia.txt"));
+        Scanner s = new Scanner(new File("temp_croatia_2021-09-21.txt"));
 
         // skip first line (header)
         s.nextLine();
