@@ -17,7 +17,7 @@ public class FileProcessor {
         s.useDelimiter(", |\n");
 
         // skip first line (header)
-        s.nextLine()
+        s.nextLine();
 
         while(s.hasNext()) {
             String city = s.next();
