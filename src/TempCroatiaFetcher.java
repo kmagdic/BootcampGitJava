@@ -5,11 +5,17 @@ import org.jsoup.select.Elements;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class TempCroatiaFetcher {
 
-    public static void main(String[] args) throws IOException{
-        FileWriter w = new FileWriter("temp_croatia.txt");
+    public static void main(String[] args) throws IOException {
+
+        DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        String fileName = "temp_croatia_" + formatter.format(new Date()) + ".txt";
+        FileWriter w = new FileWriter(fileName);
 
         String url = "https://meteo.hr/podaci.php?section=podaci_vrijeme&prikaz=abc";
         Document doc = Jsoup.connect(url).get();
@@ -28,5 +34,7 @@ public class TempCroatiaFetcher {
             w.write(city + ", " + temp + ", " + pressure + "\n");
         }
         w.close();
+
+        System.out.println("File '" + fileName + "' is created.");
     }
 }

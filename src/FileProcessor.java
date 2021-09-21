@@ -11,13 +11,13 @@ import java.util.Scanner;
 
 public class FileProcessor {
     public static void main(String[] args) throws IOException {
-        Scanner s = new Scanner(new File("temp_croatia.txt"));
-
-        // skip first line (header)
-        s.nextLine();
+        Scanner s = new Scanner(new File("temp_croatia_2021-09-21.txt"));
 
         // set delimiter to ", " or "\n"
         s.useDelimiter(", |\n");
+
+        // skip first line (header)
+        s.nextLine()
 
         while(s.hasNext()) {
             String city = s.next();
