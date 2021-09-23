@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class TempCroatiaFileProcessor {
 
     public static void main(String[] args) throws IOException {
-        String fileName = "temp_croatia_2021-09-21.txt";
+        String fileName = "doc/temp_croatia_2021-09-21.txt";
 
         printAllCityData(fileName);
 
