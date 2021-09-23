@@ -18,7 +18,7 @@ public class DemoFileWriter {
 
         // write temperature date into file
         try {
-            FileWriter w = new FileWriter("temp_croatia_demo.txt");
+            FileWriter w = new FileWriter("doc/temp_croatia_demo.txt");
 
             w.write("Postaja, Temperatura zraka (°C), Tlak zraka (hPa)\n");
 
@@ -36,7 +36,7 @@ public class DemoFileWriter {
 
         // read same file and print line by line
         try {
-            Scanner s = new Scanner(new File("temp_croatia_demo.txt"));
+            Scanner s = new Scanner(new File("doc/temp_croatia_demo.txt"));
 
             int i = 0;
             while(s.hasNextLine()) {
