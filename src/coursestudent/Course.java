@@ -1,5 +1,7 @@
 package coursestudent;
 
+import java.util.Objects;
+
 public class Course {
     String name;
     int durationInDays;
@@ -22,6 +24,7 @@ public class Course {
         this.durationInDays = durationInDays;
         this.started = started;
     }
+
 
     @Override
     public String toString() {

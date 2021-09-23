@@ -47,10 +47,6 @@ public class ParkingMachine {
         this.ticketPricePerHour = ticketPricePerHour;
     }
 
-    /*public int makeTicket(int hours) {
-        return ParkingTicket;
-    }*/
-
 
     @Override
     public String toString() {
@@ -60,5 +56,9 @@ public class ParkingMachine {
                 ", emptyTicketsPaper=" + emptyTicketsPaper +
                 ", ticketPricePerHour=" + ticketPricePerHour +
                 '}';
+    }
+
+    public ParkingTicket makeTicket(int hours) {
+        return new ParkingTicket(hours, this);
     }
 }

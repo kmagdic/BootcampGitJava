@@ -5,7 +5,7 @@ public class ParkingTicket {
     private ParkingMachine parkingMachine;
 
 
-    public ParkingTicket(int hours, ParkingMachine parkingMachine) {
+    protected ParkingTicket(int hours, ParkingMachine parkingMachine) {
         this.hours = hours;
         this.parkingMachine = parkingMachine;
     }
@@ -16,6 +16,14 @@ public class ParkingTicket {
 
     public parkingsystem.ParkingMachine getParkingMachine() {
         return parkingMachine;
+    }
+
+    public void setHours(int hours) {
+        this.hours = hours;
+    }
+
+    public int getHours() {
+        return hours;
     }
 
     @Override
