@@ -6,7 +6,7 @@ public class CalcConsole {
 
     public static Scanner input = new Scanner(System.in);
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws Exception {
 
         Calculator calc = null;
 
@@ -31,6 +31,6 @@ public class CalcConsole {
         calc.setOperation(input.next());
         calc.setB(input.nextDouble());
 
-        System.out.println(calc.doOperation());
+        System.out.println(calc.calculate());
     }
 }

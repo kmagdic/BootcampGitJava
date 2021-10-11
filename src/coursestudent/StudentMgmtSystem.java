@@ -1,8 +1,9 @@
 package coursestudent;
 
-import java.sql.*;
 
-public class StudentattendsCourse {
+import java.util.List;
+
+public class StudentMgmtSystem {
     public static void main(String[] args) {
         /*
         Course c1 = new Course("Web programiranje", 15, true);
@@ -18,14 +19,17 @@ public class StudentattendsCourse {
         System.out.println(s3);
 
 
-        StudentDaoSqlLIte.connectToDB("doc/students.db");
-        StudentDaoSqlLIte.insertToDB(s1);
+        StudentDaoSqlite studentDao = new StudentDaoSqlite("doc/students.db");
+        studentDao.insertToDB(s1);
+        studentDao.insertToDB(s2);
 
-        try {
-            StudentDaoSqlLIte.c.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
+        System.out.println("List all students: ");
+        List<Student> students =  studentDao.getAll();
+
+        for(Student s : students) {
+            System.out.println(s);
         }
+        studentDao.close();
     }
 
 

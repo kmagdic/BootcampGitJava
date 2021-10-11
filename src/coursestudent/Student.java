@@ -5,6 +5,10 @@ public class Student {
     private String lastName;
     private Course course;
 
+    public Student() {
+
+    }
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
