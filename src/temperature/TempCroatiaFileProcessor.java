@@ -39,7 +39,6 @@ public class TempCroatiaFileProcessor {
             float pressure = Float.parseFloat(s.next());
             System.out.println(city + " - " + temp + " - " + pressure);
         }
-
     }
 
     // Tim 1

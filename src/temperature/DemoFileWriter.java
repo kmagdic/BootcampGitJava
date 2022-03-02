@@ -1,5 +1,4 @@
 package temperature;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -15,11 +14,9 @@ public class DemoFileWriter {
         System.out.println("File size: " + fileA.length());
         System.out.println("File writable: " + fileA.canWrite());
 
-
         // write temperature date into file
        /* try {
             FileWriter w = new FileWriter("doc/temp_croatia_demo.txt");
-
             w.write("Postaja, Temperatura zraka (°C), Tlak zraka (hPa)\n");
 
             w.write("Zagreb, 21.5, 1005\n");
@@ -33,10 +30,9 @@ public class DemoFileWriter {
             e.printStackTrace();
         }*/
 
-
         // read same file and print line by line
         try {
-            Scanner s = new Scanner(new File("doc/temp_croatia_demo.txt"));
+            Scanner s = new Scanner(new File("doc/temp_croatia_2021-09-21.txt"));
 
             int i = 0;
             while(s.hasNextLine()) {
@@ -47,38 +43,9 @@ public class DemoFileWriter {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
-
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
-
         try {
             FileWriter w = new FileWriter("temp_croatia_demo.txt");
 
@@ -93,6 +60,5 @@ public class DemoFileWriter {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         */
 
